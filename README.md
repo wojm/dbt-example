@@ -1,11 +1,28 @@
+# DBT Example
 Welcome to your new dbt project!
 
-### Using the starter project
+## Getting Started
 
-Try running the following commands:
-- dbt run
-- dbt test
+### Prerequisites
+#### Docker
 
+#### Postgres 
+```
+docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres
+```
+
+## Development
+### Seeding data
+To upload the seed data, use:
+```
+dbt seed --profiles-dir ./
+```
+
+### Executing
+To upload views and tables, use:
+```
+dbt run --profiles-dir ./
+```
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/overview)
